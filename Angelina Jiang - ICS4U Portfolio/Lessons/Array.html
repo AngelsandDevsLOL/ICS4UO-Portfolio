@@ -1,0 +1,279 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body style = "background-color: rgb(208, 255, 252); margin:0%">
+        <div class = "navbar">
+            <a href = "../portfolio.html">Home</a>
+            <div class = "dropdown">
+                <div class = "dropbtn" style = "padding-top: 0px; padding-bottom: 0px;">
+                    <button class = "dropbtn" style = "padding-right: 0px; padding-left: 0px">Lessons</button>
+                    <img src = "../Images/arrow.png" alt = "arrow" height = "12" width="auto"/>
+                </div>   
+                <div class = "dropdown-content">
+                    <a href = "Array.html" style = "background-color: aquamarine;">Array</a>
+                    <a href = "ArrayList.html">ArrayList</a>
+                    <a href = "OOP.html">OOP</a>
+                    <a href = "Recursion.html">Recursion</a>
+                    <a href = "Search and Sort.html">Search and Sort</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class = "dropbtn" style = "padding-top: 0px; padding-bottom: 0px;">
+                    <button class = "dropbtn" style = "padding-right: 0px; padding-left: 0px">Algorithms</button>
+                    <img src = "../Images/arrow.png" alt = "arrow" height = "12" width="auto"/>
+                </div>   
+                <div class="dropdown-content">
+                    <a href = "../Algorithms/2-Pointers.html">2 Pointers</a>
+                    <a href = "../Algorithms/MoreDatatypes.html">More Datatypes</a>
+                    <a href = "../Algorithms/Prefix Sum Array.html">PSA</a>
+                </div>
+            </div>
+            <a href="../Projects.html">Projects</a>
+            <a href="../About Me.html">About Me</a>
+            <a href="../Bibliography.html">Bibliography</a>
+            </div>
+
+            <div style = "padding-top: 45px;">
+            <img src = "../Images/arrays.jpg" width = "100%"/>
+            </div>
+
+            <div style = "margin-left: 10%; margin-right: 10%; margin-bottom: 0px; padding: 15px;">
+                <p style = "text-align: center"><b style = "font-size: x-large;">Arrays</b></p>
+                <p style = "font-size: larger">Arrays are blocks or lists that can hold multiple data in the same location. Each array can contain one datatype. Each value in the array is called an element. Furthermore, the size of the array cannot be changed. When the array is declared and initialized, the values will be set to null unless it is a primitive type.
+                <div style = "display:grid; align-items:center; grid-template-columns: 1fr 1fr 1fr; column-gap: 10px; padding: 15px; padding-bottom: 0px">
+                    <div>Here is how to initialize an array:<br>
+                    <code>int[] name = new int[size];</code> <br> <code>Object[] name = new Object[size];</code></p></div>
+                    <div>
+                        Here is how to change the value in an element:<br>
+                        <code>name[index] = 0;</code>
+                    </div>
+                    <div>
+                        Here is how to access the value in an element:<br>
+                        <code>int x = name[index];</code>
+                    </div>
+                </div>
+                <img width = "100%" src = "../Images/ArrayExample.png"/>
+                <div>
+                    <div style = "background-color: rgb(255, 180, 130); padding: 15px; border-radius: 10px; text-align: center">
+                        Arrays are important since they can make code shorter and save time.
+                    </div>
+                    <div style = "display:grid; align-items:center; grid-template-columns: 1fr 30px 1fr; column-gap: 10px; padding: 15px; padding-bottom: 0px">
+                        <code class = "codee" style = "padding: 25px; border-radius: 10px;">
+                            <span class = "primDatatypes">int</span> sum = 0<span class = "primDatatypes">;</span><br>
+                            sum += score0<span class = "primDatatypes">;</span><br>
+                            sum += score1<span class = "primDatatypes">;</span><br>
+                            ...<br>
+                            sum += score99<span class = "primDatatypes">;</span><br>
+                        </code>
+                        <div style = "text-align: center">vs</div>
+                        <code class = "codee" style = "padding: 25px; border-radius: 10px;">
+                            <span class = "primDatatypes">int</span> n = 100<span class = "primDatatypes">;</span><br>
+                            <span class = "primDatatypes">for</span> (<span class = "primDatatypes">int</span> i = 0<span class = "primDatatypes">;</span> i < n<span class = "primDatatypes">;</span> i++) {<br>
+                                &nbsp&nbsp&nbsp&nbspsum += scores[i]<span class = "primDatatypes">;</span><br>
+                            }
+                        </code>
+                    </div>
+                </div><br>
+                <div>
+                    <div style = "display:grid; align-items:center; grid-template-columns: 1fr 30px 1fr; column-gap: 10px; padding: 15px; padding-bottom: 0px">
+                        <code class = "codee" style = "padding: 25px; border-radius: 10px;">
+                            <span class = "primDatatypes">if</span> (n == 0) display(score0)<span class = "primDatatypes">;</span><br>
+                            <span class = "primDatatypes">else if</span> (n == 1) display(score1)<span class = "primDatatypes">;</span><br>
+                            <span class = "primDatatypes">else</span> ...<br>
+                        </code>
+                        <div style = "text-align: center">vs</div>
+                        <code class = "codee" style = "padding: 25px; border-radius: 10px;">
+                            display(array[n])<span class = "primDatatypes">;</span>
+                        </code>
+                    </div>
+                </div><br>
+                <div style = "background-color: rgb(255, 199, 161); padding: 15px; border-radius: 10px; text-align: center">
+                    If we already have the values that we want in the array, we can initialize the array like this:
+                    <code>int[] values = {1, 2, 3};</code>
+                </div>
+                <div style = "background-color: rgb(255, 217, 192); padding: 15px; border-radius: 10px; text-align: center">
+                    Notice that <code>int values[]</code> also works for declaration, but is not proper java syntax.
+                </div>
+                <div style = "display:grid; align-items:center; grid-template-columns: 1fr 30px 1fr; column-gap: 10px; padding: 15px; padding-bottom: 0px">
+                    <code class = "codee" style = "padding: 25px; border-radius: 10px;">
+                        <span class = "primDatatypes">public int</span>[] <span class = "methods">method</span>(<span class = "primDatatypes">int</span>[] arr) {<br>
+                            &nbsp&nbsp&nbsp&nbsparr[0] = 0<span class = "primDatatypes">;</span><br>
+                            &nbsp&nbsp&nbsp&nbspreturn arr<span class = "primDatatypes">;</span><br>
+                        }
+                    </code>
+                    <div>
+                    </div>
+                    <div>
+                        When passing arrays in the parameter, it is the same as declaring the array. <br><br>When returning the array, putting the name of the array would suffice.
+                    </div>
+                </div><br>
+                <div style = "background-color: rgb(255, 228, 210); padding: 15px; border-radius: 10px; text-align: center">
+                    Notice that the example code above sets the first element to 0 and returns the array. Arrays are not primitive data types, meaning that when they pass through a method and are changed, the change stays. So, once the method is done, the first element of the array will stay as 0. Thus, returning the array is useless
+                </div><br>
+                <b style = "font-size: x-large">2D Arrays</b>
+                <p>2D Arrays is when you have a 1D array, what we have been talking about, and the datatype in your array is an array of all the same datatype. </p>
+                <div style = "display:grid; align-items:center; grid-template-columns: 1fr 20px 1fr; column-gap: 10px; padding: 15px; padding-bottom: 0px">
+                    <img src = "../Images/1DRepresentation.png"/>
+                    <div></div>
+                    <div>
+                        2D Arrays look like this. In order to access, let's say the 8, we would write <code>arr[1][2]</code>. Remember that the index starts with 0. We do this since we find the row, then the column. For 1D arrays, we only needed to find the column since the row would always be 0. 
+                    </div>
+                </div>
+                <div style = "display:grid; align-items:center; grid-template-columns: 1fr 20px 1fr; column-gap: 10px; padding: 15px; padding-bottom: 0px">
+                    <img src = "../Images/2Drepresentation2.png"/>
+                    <div></div>
+                    <div>
+                        However, using a table or a chart makes it easier to understand how 2D arrays work! Notice that the array is extended vertically, and it is much easier to read <code>arr[1][2]</code>.
+                    </div>
+                </div>
+                <div style = "display:grid; align-items:center; grid-template-columns: 2fr 10px 1fr; column-gap: 10px; padding: 15px; padding-bottom: 0px">
+                    <code class = "codee" style = "padding: 25px; border-radius: 10px;">
+                        <table class = "codee">
+                            <tr>
+                                <td>1: </td>
+                                <td>int[][] ar = new int[4][3]; // 4 rows, 3 columns</td>
+                            </tr>
+                            <tr>
+                                <td>2: </td>
+                                <td>ar[0][0] = 1;</td>
+                            </tr>
+                            <tr>
+                                <td>3: </td>
+                                <td>ar[3][2] = 1; // the element at the bottom right</td>
+                            </tr>
+                            <tr>
+                                <td>4: </td>
+                                <td>int x = ar[0][2];</td>
+                            </tr>
+                            <tr>
+                                <td>5: </td>
+                                <td>ar = {{1, 2, 3}{4, 5}};</td>
+                            </tr>
+                        </table>
+                    </code>
+                    <div></div>
+                    <div>
+                        Line 1 creates a rectangular array with a 4 by 3 table. <br> Line 5 creates a <b>ragged array</b>. A ragged array is when it is <b>weirdly shaped</b>. Now, ar has 2 rows, a maximum of 3 columns, but <code>ar[1][2]</code> does not exist.  
+                    </div>
+                </div>
+                <div style = "display:grid; align-items:center; grid-template-columns: 2fr 10px 1fr; column-gap: 10px; padding: 15px; padding-bottom: 0px">
+                    <img src = "../Images/arRepresentation.png"/><div></div>
+                    <div>To the left, we have a visual representation of the ragged array in Line 5. </div>
+                </div><br>
+                <div style = "background-color: rgb(255, 228, 210); padding: 15px; border-radius: 10px;">
+                    The main problem with arrays is that if we want to insert a number, then it will be hard. This is because it will involve creating a new array with a new size and copying the previous array, as well as shifting some elements over.
+                </div>
+                <div style = "background-color: rgb(255, 255, 255); padding: 15px; border-radius: 10px;">
+                    Using <code><b>arr.length</b></code> on a 1D array will give you the number of columns. Using arr.length on a 2D array will give you the number of <b>rows</b>. To get the number of columns for any rows, you can do <code>arr[row].length</code> to get the <b>column</b>.
+                </div>
+            </div>
+
+          <div style = "background-color: #b9af9d; padding: 30px;">
+            <h3 style = "text-align: center;">Contact Me!</h3>
+            <table style = "padding:15px; padding-top:0%;   margin-left: auto; margin-right: auto;">
+                <tr>
+                    <td><b>Email:</b></td>
+                    <td>angelina.jiang@student.tdsb.on.ca</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Last Updated: 2023</td>
+                </tr>
+            </table>
+        </div>
+          <style>
+            .codee {
+                background-color: rgb(44,44,44);
+                color:white;
+                font-size:large;
+            }
+
+            .primDatatypes {
+                color: rgb(219, 153, 103);
+            }
+
+            .oopVariables {
+                color:rgb(182, 214, 212);
+            }
+
+            .comments {
+                color:rgb(40, 180, 155);
+            }
+
+            .methods {
+                color: #f7ba5d;
+            }
+            /* Navbar container */
+                .navbar {
+                    position: fixed;
+                    width: 100%;
+                    background-color: rgb(173, 214, 227);
+                    font-family:'Courier New', Courier, monospace;
+                }
+
+                /* Links inside the navbar */
+                .navbar a {
+                float:left;
+                font-size: 16px;
+                color: rgb(0, 55, 77);
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                }
+
+                /* The dropdown container */
+                .dropdown {
+                float: left;
+                overflow: hidden;
+                }
+
+                /* Dropdown button */
+                .dropdown .dropbtn {
+                font-size: 16px;
+                border: none;
+                outline: none;
+                color: rgb(0, 55, 77);
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit; /* Important for vertical align on mobile phones */
+                margin: 0; /* Important for vertical align on mobile phones */
+                }
+
+                /* Add a red background color to navbar links on hover */
+                .navbar a:hover, .dropdown:hover .dropbtn {
+                background-color: rgb(255, 186, 186);
+                }
+
+                /* Dropdown content (hidden by default) */
+                .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+                }
+
+                /* Links inside the dropdown */
+                .dropdown-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+                }
+
+                /* Add a grey background color to dropdown links on hover */
+                .dropdown-content a:hover {
+                background-color: #ddd;
+                }
+
+                /* Show the dropdown menu on hover */
+                .dropdown:hover .dropdown-content {
+                display: block;
+                }
+          </style>
+    </body>
+</html>

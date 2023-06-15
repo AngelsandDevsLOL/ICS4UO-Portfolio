@@ -1,0 +1,298 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body style = "background-color: rgb(208, 255, 252); margin:0%">
+        <div class = "navbar">
+            <a href = "portfolio.html">Home</a>
+            <div class = "dropdown">
+                <div class = "dropbtn" style = "padding-top: 0px; padding-bottom: 0px;">
+                    <button class = "dropbtn" style = "padding-right: 0px; padding-left: 0px">Lessons</button>
+                    <img src = "Images/arrow.png" alt = "arrow" height = "12" width="auto"/>
+                </div>   
+                <div class = "dropdown-content">
+                    <a href = "Lessons/Array.html">Array</a>
+                    <a href = "Lessons/ArrayList.html">ArrayList</a>
+                    <a href = "Lessons/OOP.html">OOP</a>
+                    <a href = "Lessons/Recursion.html">Recursion</a>
+                    <a href = "Lessons/Search and Sort.html">Search and Sort</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class = "dropbtn" style = "padding-top: 0px; padding-bottom: 0px;">
+                    <button class = "dropbtn" style = "padding-right: 0px; padding-left: 0px">Algorithms</button>
+                    <img src = "Images/arrow.png" alt = "arrow" height = "12" width="auto"/>
+                </div>   
+                <div class="dropdown-content">
+                    <a href = "Algorithms/2-Pointers.html">2 Pointers</a>
+                    <a href = "Algorithms/MoreDatatypes.html">More Datatypes</a>
+                    <a href = "Algorithms/Prefix Sum Array.html">PSA</a>
+                </div>
+            </div>
+            <a href="Projects.html" style = "background-color: aquamarine;">Projects</a>
+            <a href="About Me.html">About Me</a>
+            <a href="Bibliography.html">Bibliography</a>
+        </div>
+        <div style = "padding-top: 45px;">
+            <img src = "Images/Projects.JPG" width = "100%"/>
+        </div>
+
+        <h2 style = "text-align: center">Projects</h2>
+        <div style = "display:grid; align-items:center; grid-template-columns: 1fr 40px 1fr; column-gap:10;margin-left: 10%; margin-right: 10%; margin-bottom: 0px; padding: 15px; padding-bottom: 0px">
+            <div>
+                <b style = "text-align: center; font-size: larger">Unit 1: OOP</b>
+                <p>We did a small assignment involving declaring and initializing given objects as well as using their methods to gain a better understanding of OOP. 
+                </p>
+            </div>
+            <div>
+
+            </div>
+            <div>
+                <b style = "text-align: center; font-size: larger">Unit 2: Inheritance</b>
+                <p>We created an Airplane class using the following instructions given. This assignment proved that we understood how Object Oriented Programming worked.</p>
+            </div>
+        </div>
+        <div style = "margin-left: 10%; margin-right: 10%; margin-bottom: 0px; padding: 15px; padding-bottom: 0px">
+            <b style = "text-align: center; font-size: larger; margin-left: auto; margin-right: auto;">Unit 2: Inheritance (yet again)</b>
+            <p>The assignment is to create our own methods with a parent method which either follows a creation story or a gadget idea that hasn’t been done before. It would demonstrate our creativity as well as our understanding of inheritance.</p>
+            <p>My group created a gadget called Magical Scrolls, where there would be different types of Magical Scrolls (ex: WaterScroll, WindScroll, FireScroll) which would originate from the parent class (BlankMagicalScroll) that would be used in the Driver class. 
+            </p>
+            <video width = "100%" controls>
+                <source src = "Images/Gadget.mp4" type = "video/mp4">
+                Your browser does not support HTML video.
+            </video>
+        </div>
+
+        <div style = "display:grid; align-items:center; grid-template-columns: 1fr 40px 2fr; column-gap:10;margin-left: 10%; margin-right: 10%; margin-bottom: 0px; padding: 15px; padding-bottom: 0px">
+            <div>
+                <b style = "font-size: larger">Unit 3: Arrays</b>
+                <p>We created a Ratings class where we sorted something, in our case, Phones, and printed out their ratings. We decided to rate them by the sum of ratings. We calculated this using insertion sort but using multiple arrays and binary search. We did this for one class using parallel arrays to store the rating and then 2d arrays to store the rating</p>
+                <br>
+                <br>
+                To the right is an exerpt of our code. getRanks() method returns a String[] of the ranks using the company names. ranking() returns the numeric value, displaying that the ith number is the rank for the ith company. 
+            </div>
+            <div>
+            </div>
+                <code class = "codee" style = "padding: 25px; border-radius: 10px">
+                    <span class = "primDatatypes">public void</span> <span class = "methods">bestQuality</span> (String[] n<span class = "primDatatypes">, int[]</span> battery<span class = "primDatatypes">, int[]</span> camRes<span class = "primDatatypes">, int[]</span> mem<span class = "primDatatypes">, int[]</span> proSpeed<span class = "primDatatypes">, int[]</span> p) {<br>
+                        &nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">for</span> (<span class = "primDatatypes">int</span> i = <span class = "oopVariables">0</span><span class = "primDatatypes">;</span> i < p.<span class = "oopVariables">length</span><span class = "primDatatypes">;</span> i++) {<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspp[i] = p[i] * -<span class = "oopVariables">1</span><span class = "primDatatypes">;</span> <span class = "comments">// so it is ranked from lowest to highest</span><br>
+                            &nbsp&nbsp&nbsp&nbsp}<br>
+                            &nbsp&nbsp&nbsp&nbspString[] batteryR = getRanks(n<span class = "primDatatypes">,</span> battery)<span class = "primDatatypes">;</span><br>
+                            &nbsp&nbsp&nbsp&nbspString[] camResR = getRanks(n<span class = "primDatatypes">,</span> camRes)<span class = "primDatatypes">;</span><br>
+                            &nbsp&nbsp&nbsp&nbspString[] memR = getRanks(n<span class = "primDatatypes">,</span> mem)<span class = "primDatatypes">;</span><br>
+                            &nbsp&nbsp&nbsp&nbspString[] proSpeedR = getRanks(n<span class = "primDatatypes">,</span> proSpeed)<span class = "primDatatypes">;</span><br>
+                        &nbsp&nbsp&nbsp&nbspString[] pR = getRanks(n<span class = "primDatatypes">,</span> p)<span class = "primDatatypes">;</span><br>
+                        &nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">int</span>[] batteryRanks = ranking(n<span class = "primDatatypes">,</span> batteryR<span class = "primDatatypes">,</span> battery)<span class = "primDatatypes">;</span><br>
+                        &nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">int</span>[] camResRanks = ranking(n<span class = "primDatatypes">,</span> camResR<span class = "primDatatypes">,</span> camRes)<span class = "primDatatypes">;</span><br>
+                        &nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">int</span>[] memRanks = ranking(n<span class = "primDatatypes">,</span> memR<span class = "primDatatypes">,</span> mem)<span class = "primDatatypes">;</span><br>
+                        &nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">int</span>[] proSpeedRanks = ranking(n<span class = "primDatatypes">,</span> proSpeedR<span class = "primDatatypes">,</span> proSpeed)<span class = "primDatatypes">;</span><br>
+                        &nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">int</span>[] pRanks = ranking(n<span class = "primDatatypes">,</span> pR<span class = "primDatatypes">,</span> p)<span class = "primDatatypes">;</span><br>
+                        &nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">int</span>[] sum = new int[n.<span class = "oopVariables">length</span>]<span class = "primDatatypes">;</span><br>
+                        &nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">for</span> (int i = <span class = "oopVariables">0</span>; i < sum.<span class = "oopVariables">length</span>; i++) {<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspsum[i] = -<span class = "oopVariables">1</span> * (<span class = "oopVariables">30</span> - (batteryRanks[i] + camResRanks[i] + memRanks[i] + proSpeedRanks[i] + pRanks[i]))<span class = "primDatatypes">;</span><br>
+                            &nbsp&nbsp&nbsp&nbsp}<br>
+                            &nbsp&nbsp&nbsp&nbspString[] finalRanks = getRanks(n<span class = "primDatatypes">,</span> sum);<br>
+                            &nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">int</span>[] ranks = ranking(finalRanks<span class = "primDatatypes">,</span> finalRanks<span class = "primDatatypes">,</span> sum)<span class = "primDatatypes">;</span><br>
+                            &nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">int</span> x = <span class = "oopVariables">1</span><span class = "primDatatypes">;</span><br>
+                        &nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">int</span>[] finalR = new int[ranks.<span class = "oopVariables">length</span>]<span class = "primDatatypes">;</span><br>
+                        &nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">for</span> (int i = 0<span class = "primDatatypes">;</span> i < finalR.<span class = "oopVariables">length</span><span class = "primDatatypes">;</span> i++) {<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspfinalR[i] = ranks[n.<span class = "oopVariables">length</span> - i - <span class = "oopVariables">1</span>]<span class = "primDatatypes">;</span><br>
+                            &nbsp&nbsp&nbsp&nbsp}<br>
+                            &nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">for</span> (int i = <span class = "oopVariables">0</span><span class = "primDatatypes">;</span> i < ranks.<span class = "oopVariables">length</span><span class = "primDatatypes">;</span> i++) {<br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSystem.<span class = "oopVariables">out</span>.println(finalR[i] + <span class = "comments">". "</span> + finalRanks[i])<span class = "primDatatypes">;</span><br>
+                                &nbsp&nbsp&nbsp&nbsp}<br>
+                    }<br>
+                </code>
+        </div>
+        <br><br>
+        <p style = "font-size: larger; text-align: center"><b>Unit 4: ArrayLists</b></p>
+        <div style = "display:grid; align-items:center; grid-template-columns: 1fr 40px 1fr; column-gap:10;margin-left: 10%; margin-right: 10%; margin-bottom: 0px; padding: 15px; padding-bottom: 0px">
+            <div>
+                We created a MaCSBook which would store the student’s name, number, and 3 grades. It would also be able to calculate the student average and the class average through the console and read input from a file.
+                <br><br>
+                <video width = "100%" controls>
+                    <source src = "Images/UsingMaCSBook - Made with Clipchamp.mp4" type = "video/mp4">
+                    Your browser does not support HTML video.
+                </video>
+            </div>
+            <div></div>
+            <div>
+                We created a class which would create sentences based on a given format or poems or even randomize cards!
+                <br><br><br><br>
+                
+            <video width = "100%" controls>
+                <source src = "Images/Sentencething - Made with Clipchamp.mp4" type = "video/mp4">
+                Your browser does not support HTML video.
+            </video>
+            </div>
+        </div>
+        <br><br><br>
+
+        <p style = "font-size: larger; text-align: center"><b>Unit 5: Search and Sort</b></p>
+        <div style = "display:grid; align-items:center; grid-template-columns: 1fr 40px 1fr; column-gap:10;margin-left: 10%; margin-right: 10%; margin-bottom: 0px; padding: 15px; padding-bottom: 0px">
+            <div>
+                We used our previous assignment, MaCSBook, and created a sorting algorithm in it which would output the student’s name and average into a new file.                 <br><br>
+                <video width = "100%" controls>
+                    <source src = "Images/SortingMaCSBook - Made with Clipchamp.mp4" type = "video/mp4">
+                    Your browser does not support HTML video.
+                </video>
+            </div>
+            <div></div>
+            <div style = "text-align: center">
+                We had to choose a sorting algorithm and present it to the class. My group chose Cocktail sort.                <br><br><br><br>
+                <iframe 
+                    src="https://www.youtube.com/embed/533gZubjFVs">
+                </iframe>
+            </div>
+        </div> <br><br><br>
+        <p style = "font-size: larger; text-align: center"><b>Unit 7: Recursion</b></p>
+        <div style = "display:grid; align-items:center; grid-template-columns: 1fr 40px 1fr; column-gap:10;margin-left: 10%; margin-right: 10%; margin-bottom: 0px; padding: 15px; padding-bottom: 0px">
+            <code class = "codee" style = "padding: 25px; border-radius: 10px">
+                <span class = "primDatatypes">public void</span> <span class = "methods">expR</span> (<span class = "primDatatypes">int</span> base<span class = "primDatatypes">,</span> <span class = "primDatatypes">int</span> exponent) {<br>
+                    &nbsp&nbsp&nbsp&nbspif (exponent == <span class = "oopVariables">0</span>) <span class = "primDatatypes">return</span> <span class = "oopVariables">1</span><span class = "primDatatypes">;</span><br>
+                    &nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">return</span> base * expR (base<span class = "primDatatypes">,</span> exponent - 1)<span class = "primDatatypes">;</span><br>
+                }<br>
+                <span class = "primDatatypes">public void</span> <span class = "methods">sumR</span> (<span class = "primDatatypes">int</span> num) {<br>
+                    &nbsp&nbsp&nbsp&nbspif (num == <span class = "oopVariables">0</span>) <span class = "primDatatypes">return</span> <span class = "oopVariables">0</span><span class = "primDatatypes">;</span><br>
+                    &nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">return</span> num + sumR(num - <span class = "oopVariables">1</span>)<span class = "primDatatypes">;</span><br>
+                }<br>
+            </code>
+            <div></div>
+            <div>
+                To the right, we have two methods. <br>The <b>expR()</b> method returns the exponent of the base to the power of the exponent using recursion. <br>The <b>sumR()</b> method returns the sum from 1 to num inclusive.
+            </div>
+        </div>   <br><br>
+        <div style = "background-color:rgb(255, 217, 192); margin-left: 10%; margin-right: 10%; margin-bottom: 0px; padding: 15px; text-align: center; border-radius: 15px">
+            <b>ISP: Cooking With Mageon</b><br><br><br>
+            <span style = "line-height: 200%">
+            For the final project, our prompt was to create a game using Java GUI to solve a problem for kids. The problem we chose was with cooking. Cooking With MAGEON is an educational and entertaining game made for children ages 10-14 to learn how to cook. Specifically, MAGEON guides the player in making meals, going through the necessary processes of shopping, organizing, and cooking. In the end, the player is judged on the metrics of how caloric, nutritious, and satisfactory their meals are.
+            </span><br><br>
+            <div style = "display:grid; align-items:center; grid-template-columns: 1fr 40px 1fr; column-gap:10;margin-left: 10%; margin-right: 10%; margin-bottom: 0px;">
+                <img src="Images/ISP2.png" alt="The maze" width = "350"; height = "auto"/>
+                <div></div>
+                <img src="Images/ISP3.png" alt="Organizing the fridge" width = "350" height = "auto"/>
+            </div><br>
+            <div style = "display:grid; align-items:center; grid-template-columns: 1fr 40px 1fr; column-gap:10;margin-left: 10%; margin-right: 10%; margin-bottom: 0px;">
+                <img src="Images/ISP4.png" alt="Cooking" width = "350" height = "auto"/>
+                <div></div>
+                <img src="Images/ISP5.png" alt="Escape Room Question" width = "350" height = "auto"/>
+            </div><br>
+            <img src = "Images/ISP6.png" alt = "In the Kitchen" width = "740" height = "auto"/>
+            <br><br><br><a href = "https://github.com/kylln20/Cooking-With-Mageon-ISP">Cooking With Mageon</a>
+        </div><br><br>
+        <div style = "background-color:rgb(255, 228, 210); margin-left: 10%; margin-right: 10%; margin-bottom: 0px; padding: 15px; text-align: center; border-radius: 15px">
+            Created my own GUI using Java Swing for LyonHacks III<br>
+            <a href = "https://github.com/AngelsandDevsLOL/FocusCat">FOCUS CAT</a>
+        </div>
+        <br><br>
+
+
+        <div style = "background-color: #b9af9d; padding: 30px;">
+            <h3 style = "text-align: center;">Contact Me!</h3>
+            <table style = "padding:15px; padding-top:0%;   margin-left: auto; margin-right: auto;">
+                <tr>
+                    <td><b>Email:</b></td>
+                    <td>angelina.jiang@student.tdsb.on.ca</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Last Updated: 2023</td>
+                </tr>
+            </table>
+        </div>
+        <style>
+            .codee {
+                background-color: rgb(44,44,44);
+                color:white;
+                font-size:large;
+            }
+
+            .primDatatypes {
+                color: rgb(219, 153, 103);
+            }
+
+            .oopVariables {
+                color:rgb(182, 214, 212);
+            }
+
+            .comments {
+                color:rgb(40, 180, 155);
+            }
+
+            .methods {
+                color: #f7ba5d;
+            }
+            /* Navbar container */
+                .navbar {
+                    position: fixed;
+                    width: 100%;
+                    background-color: rgb(173, 214, 227);
+                    font-family:'Courier New', Courier, monospace;
+                }
+
+                /* Links inside the navbar */
+                .navbar a {
+                float:left;
+                font-size: 16px;
+                color: rgb(0, 55, 77);
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                }
+
+                /* The dropdown container */
+                .dropdown {
+                float: left;
+                overflow: hidden;
+                }
+
+                /* Dropdown button */
+                .dropdown .dropbtn {
+                font-size: 16px;
+                border: none;
+                outline: none;
+                color: rgb(0, 55, 77);
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit; /* Important for vertical align on mobile phones */
+                margin: 0; /* Important for vertical align on mobile phones */
+                }
+
+                /* Add a red background color to navbar links on hover */
+                .navbar a:hover, .dropdown:hover .dropbtn {
+                background-color: rgb(255, 186, 186);
+                }
+
+                /* Dropdown content (hidden by default) */
+                .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+                }
+
+                /* Links inside the dropdown */
+                .dropdown-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+                }
+
+                /* Add a grey background color to dropdown links on hover */
+                .dropdown-content a:hover {
+                background-color: #ddd;
+                }
+
+                /* Show the dropdown menu on hover */
+                .dropdown:hover .dropdown-content {
+                display: block;
+                }
+          </style>
+    </body>
+</html>

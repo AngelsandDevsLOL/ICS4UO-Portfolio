@@ -1,0 +1,327 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body style = "background-color: rgb(208, 255, 252); margin:0%">
+        <div class = "navbar">
+            <a href = "../portfolio.html">Home</a>
+            <div class = "dropdown">
+                <div class = "dropbtn" style = "padding-top: 0px; padding-bottom: 0px;">
+                    <button class = "dropbtn" style = "padding-right: 0px; padding-left: 0px">Lessons</button>
+                    <img src = "../Images/arrow.png" alt = "arrow" height = "12" width="auto"/>
+                </div>   
+                <div class = "dropdown-content">
+                    <a href = "Array.html">Array</a>
+                    <a href = "ArrayList.html">ArrayList</a>
+                    <a href = "OOP.html">OOP</a>
+                    <a href = "Recursion.html">Recursion</a>
+                    <a href = "Search and Sort.html" style = "background-color: aquamarine;">Search and Sort</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class = "dropbtn" style = "padding-top: 0px; padding-bottom: 0px;">
+                    <button class = "dropbtn" style = "padding-right: 0px; padding-left: 0px">Algorithms</button>
+                    <img src = "../Images/arrow.png" alt = "arrow" height = "12" width="auto"/>
+                </div>   
+                <div class="dropdown-content">
+                    <a href = "../Algorithms/2-Pointers.html">2 Pointers</a>
+                    <a href = "../Algorithms/MoreDatatypes.html">More Datatypes</a>
+                    <a href = "../Algorithms/Prefix Sum Array.html">PSA</a>
+                </div>
+            </div>
+            <a href="../Projects.html">Projects</a>
+            <a href="../About Me.html">About Me</a>
+            <a href="../Bibliography.html">Bibliography</a>
+            </div>
+            <div style = "padding-top: 45px;">
+                <img src = "../Images/Searchandsort.JPG" width = "100%"/>
+            </div>
+            <div style = "margin-left: 10%; margin-right: 10%; margin-bottom: 0px; padding: 15px;">
+                <div style = "background-color:rgb(255, 180, 130); border-radius: 10px; padding: 13px">
+                    <b>Searching</b> - An algorithm to find a specific target in a list<br>
+                    <b>Sorting</b> - Rearranging the list so the elements are in ascending or descending order
+                </div>
+                <div style = "background-color:rgb(255, 199, 161); border-radius: 10px; padding: 13px">
+                    <b>Sequential Search</b> is when you go through each element of the array linearly in order to find the target. This takes <code>O(n)</code> time
+                    <br><img style = "width: 28%" src = "../Images/seqsearch1.png"/><img style = "width: 33%" src = "../Images/seqsearch2.png"/><img style = "width: 33%" src = "../Images/seqsearch3.png"/>
+                    <br><br> <b>Binary Search</b> is when you look at the middle element of a range in the array and check if the middle is the target, or if the middle is before or after the target. 
+                    Notice that binary search only works on sorted arrays and will take <code>O(log n) time</code>.
+                    <br><br>
+                    <div style = "line-height: 1.5">
+                        <br>In the list, it will try to find the element between two indexes, low and high, so that the target should be between range low and high inclusive. These are examples of 2 - pointers.
+                        <br>It then checks the middle element of the range to see if it is the same, greater, or less than. 
+                        <br>&nbsp&nbsp&nbsp&nbspIf the middle element is equal, then return the index. 
+                        <br>&nbsp&nbsp&nbsp&nbspIf it’s greater, then the target must be somewhere before it in the list, so the high pointer can be set to the current index - 1. 
+                        <br>&nbsp&nbsp&nbsp&nbspIf it’s lower, then the target must be somewhere after it in the list, so the low pointer can be set to the current index + 1. 
+                        <br>Then, reuse this algorithm on the next range until the target has been found or high < low, which means that the target is non-existent or not in the list
+                        <br><br>Can be implemented using iterative while loop or recursion
+                    </div>
+                </div>
+                <div style = "display:grid; align-items:center; grid-template-columns: 1fr 1fr; margin-bottom: 0px; padding: 15px; padding-bottom: 0px">
+                    <img width = "95%"src = "../Images/binarySearch.png"/>
+                    <div>
+                        Let's say the first line is the sorted array, and we are trying to find the target value, 7. We will find the middle value, which will be 5. <br><br>
+                        We then notice that 5 < 7, which means that the target must be after the current element. We move the pointer to the middle of the new range, and it goes to value 8. <br><br>
+                        We then notice that 8 > 7, which means that the target must be before the current element. We move the pointer to the middle of the new range, and it goes to 6. 
+                    </div>
+                </div>
+                <div style = "display:grid; align-items:center; grid-template-columns: 1fr 1fr; margin-bottom: 0px; padding: 15px; padding-bottom: 0px">
+                    <code class = "codee" style = "padding: 25px; border-radius: 10px">
+                        <span class = "primDatatypes">public int</span> <span class = "methods">binarySearch</span>(<span class = "primDatatypes">int</span>[] ar, <span class = "primDatatypes">int</span> find, <span class = "primDatatypes">int</span> low, <span class = "primDatatypes">int</span> high) {<br>
+                            &nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">if</span> (low <= high) {<br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">int</span> mid = (low + high) / <span class = "oopVariables">2</span><span class = "primDatatypes">;</span><br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">if</span> (ar[mid] == find) <span class = "primDatatypes">return</span> mid<span class = "primDatatypes">;</span><br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">else if</span> (ar[mid] > find) <span class = "primDatatypes">return</span> binarySearch(ar<span class = "primDatatypes">,</span> find<span class = "primDatatypes">,</span> low<span class = "primDatatypes">,</span> mid - <span class = "oopVariables">1</span>)<span class = "primDatatypes">;</span><br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">else return</span> binarySearch(ar<span class = "primDatatypes">,</span> find<span class = "primDatatypes">,</span> mid + <span class = "oopVariables">1</span><span class = "primDatatypes">,</span> high)<span class = "primDatatypes">;</span><br>
+                                &nbsp&nbsp&nbsp&nbsp}<br>
+                                &nbsp&nbsp&nbsp&nbsp return -<span class = "oopVariables">1</span><span class = "primDatatypes">;</span><br>
+                         } <br>
+                    </code>
+                    <code class = "codee" style = "padding: 25px; border-radius: 10px">
+                        <span class = "primDatatypes">public int</span> <span class = "methods">binarySearch</span>(<span class = "primDatatypes">int</span>[] ar, <span class = "primDatatypes">int</span> find, <span class = "primDatatypes">int</span> low, <span class = "primDatatypes">int</span> high) {<br>
+                            &nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">while</span> (low <= high) {<br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">int</span> mid = (low + high) / <span class = "oopVariables">2</span><span class = "primDatatypes">;</span><br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">if</span> (ar[mid] == find) return mid<span class = "primDatatypes">;</span><br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">else if</span> (ar[mid] > find) high = mid - <span class = "oopVariables">1</span><span class = "primDatatypes">;</span><br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">else</span> low = mid + <span class = "oopVariables">1</span><span class = "primDatatypes">;</span><br>
+                                &nbsp&nbsp&nbsp&nbsp}<br>
+                                &nbsp&nbsp&nbsp&nbsp return -<span class = "oopVariables">1</span><span class = "primDatatypes">;</span><br>
+                         } <br>
+                    </code>
+                </div><br>
+                <div style = "background-color:rgb(255, 217, 192); border-radius: 10px; padding: 13px">
+                    <b>Insertion</b> - Take the first k elements and assume that it is sorted. k will start as 1. Take the next element to the right, and find where to insert it. Insert it and increase k. 
+                </div>
+                <div style = "display:grid; align-items:center; grid-template-columns: 1fr 1fr; margin-bottom: 0px; padding: 15px; padding-bottom: 0px">
+                    <img style = "width: 100%" src = "../Images/InsertionSort.png"/>
+                    <div style = "background-color: rgb(255, 241, 232); border-radius: 10px; padding: 13px; line-height: 1.5">
+                        Insertion sort involves splitting the array into the 'sorted' part and the 'unsorted' part. The sorted part starts with a length of 1.<br>We take the next element of the unsorted array, and use sequential sort from the end of the sorted part to replace the last element with the element before, so that all the elements are moved back. Then, once the index of insertion is found, replace it with the target.
+                        <br> To the left, we can see a visual demonstration.
+                        <br><br>The time complexity of Insertion Sort is <code>O(n^2)</code>
+                    </div>
+                </div>
+                <div style = "display:grid; align-items:center; grid-template-columns: 30fr 30px 35fr; margin-bottom: 0px; padding: 15px;">
+                    <div style = "background-color: rgb(255, 249, 246); border-radius: 10px; padding: 13px; line-height: 1.5">
+                        <b>Pseudocode:</b> <br><br>
+                        for each element of the unsorted, starting from 1 to n:<br>
+                        &nbsp&nbsp&nbsp&nbsptake value of element that will be sorted<br>
+                        &nbsp&nbsp&nbsp&nbsplet n be the length of the sorted part<br>
+                        &nbsp&nbsp&nbsp&nbspwhile the nth element of the sorted part is smaller than current element:<br>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspchange element to the previous element<br>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspupdate n<br>
+                        &nbsp&nbsp&nbsp&nbspmake the nth element the first element of the unsorted part<br>
+                    </div> 
+                    <div></div>
+                    <code class = "codee" style = "padding: 25px; border-radius: 10px">
+                        <span class = "primDatatypes">public int</span> <span class = "methods">insertionSort</span>(<span class = "primDatatypes">double</span>[] ar, <span class = "primDatatypes">int</span> find, <span class = "primDatatypes">int</span> n) {<br>
+                            &nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">for</span> (<span class = "primDatatypes">int</span> i = <span class = "oopVariables">1</span><span class = "primDatatypes">;</span> i < n<span class = "primDatatypes">;</span> i++) {<br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">double</span> temp = arr[i]<span class = "primDatatypes">;</span><br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">int</span> num = i<span class = "primDatatypes">;</span><br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">while</span> (num > <span class = "oopVariables">0</span> && arr[num - <span class = "oopVariables">1</span>] > temp) {<br>
+                                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsparr[num] = arr[num - <span class = "oopVariables">1</span>]<span class = "primDatatypes">;</span><br>
+                                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspnum--<span class = "primDatatypes">;</span><br>
+                                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}<br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsparr[num] = temp<span class = "primDatatypes">;</span><br>
+                                &nbsp&nbsp&nbsp&nbsp}<br>
+                        }<br>
+                    </code>
+                </div>
+                </code>
+                <div style = "background-color:rgb(255, 228, 210); border-radius: 10px; padding: 13px; line-height: 1.5">
+                    <b>Selection Sort:</b><br><br>
+                    Selection sort selects the smallest element from an unsorted list in each iteration and places that element at the beginning of the unsorted list. The idea is to find the largest element and move it to the back. Find the second-largest element, or the largest element within range 1 to length - 1, and move it to the second-last element. Continue until there is only 1 element left from range 1 to 2. 
+                    <br> Time Complexity: <code>O(n^2)</code>
+                </div>
+                <div style = "display:grid; align-items:center; grid-template-columns: 1fr 30px 1fr; margin-bottom: 0px; padding: 15px; margin-left: 0">
+                    <code class = "codee" style = "padding: 25px; border-radius: 10px;">
+                        <span class = "primDatatypes">public void</span> <span class = "methods">selectionSort</span> (<span class = "primDatatypes">double</span>[] arr<span class = "primDatatypes">,</span> <span class = "primDatatypes">int</span> n) {<br>
+                            &nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">while</span> (n > <span class = "oopVariables">1</span>) {<br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">int</span> maxPos = <span class = "oopVariables">0</span><span class = "primDatatypes">;</span><br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">for</span> (<span class = "primDatatypes">int</span> i = <span class = "oopVariables">1</span><span class = "primDatatypes">;</span> i < n<span class = "primDatatypes">;</span> i++) {<br>
+                                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif (arr[i] > arr[maxPos]) maxPos = i<span class = "primDatatypes">;</span><br>
+                                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}<br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">double</span> temp = arr[maxPos]<span class = "primDatatypes">;</span><br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsparr[maxPos] = arr[n - <span class = "oopVariables">1</span>]<span class = "primDatatypes">;</span><br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsparr[n - <span class = "oopVariables">1</span>] = temp<span class = "primDatatypes">;</span><br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspn--<span class = "primDatatypes">;</span><br>
+                                &nbsp&nbsp&nbsp&nbsp}<br>
+                         }<br>
+                    </code>
+                    <div></div>
+                    <img width = "100%" src = "../Images/SelectionSort.png"/>
+                </div>
+                <div style = "background-color:rgb(255, 228, 210); border-radius: 10px; padding: 13px; line-height: 1.5">
+                    <b>Merge Sort:</b><br><br>
+                    Merge Sort is the idea of breaking up an array into smaller subarrays, sorting each subarray, and then recombining the sorted subarrays to create the final sorted array.     
+                    <br> Time Complexity: <code>O(nlogn)</code>
+                </div>
+                <div style = "display:grid; align-items:center; grid-template-columns: 1fr 30px 1fr; margin-bottom: 0px; padding: 15px; margin-left: 0">
+                    <code class = "codee" style = "padding: 25px; border-radius: 10px;">
+                        <span class = "primDatatypes">public void</span> mergeSort(<span class = "primDatatypes">double</span>[] arr, <span class = "primDatatypes">int</span> from, <span class = "primDatatypes">int</span> to) {<br>
+                            &nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">if</span> (from <= to) <span class = "primDatatypes">return</span>;<br>
+                            &nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">int</span> middle = (from + to) / 2<span class = "primDatatypes">;</span><br>
+                            &nbsp&nbsp&nbsp&nbspmergeSort(arr, from, middle)<span class = "primDatatypes">;</span><br>
+                            &nbsp&nbsp&nbsp&nbspmergeSort(arr, middle + 1, to)<span class = "primDatatypes">;</span><br>
+                            &nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">if</span> (arr[middle] > arr[middle + 1]) {<br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspcopy(arr, from, to, temp)<span class = "primDatatypes">;</span> <span class = "comments">// let temp be a temporary array initialized outside of the method</span><br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspmerge(temp, from, middle, to, arr)<span class = "primDatatypes">;</span><br>
+                                &nbsp&nbsp&nbsp&nbsp}<br>
+                         }                         
+                    </code>
+                    <div></div>
+                    <img width = "100%" src = "../Images/MergeSort.png"/>
+                </div>
+                <div style = "background-color:rgb(255, 228, 210); border-radius: 10px; padding: 13px; line-height: 1.5">
+                    <b>Quick Sort:</b><br><br>
+                    Quick Sort works by splitting a large array of data into smaller sub-arrays.<br><br>
+                    It picks one element and makes it the pivotal. Then, it separates or partitions the rest of the list into two lists, one being the list greater than the pivotal and one being the list smaller than the pivotal. Then, use quicksort on the left and right segments and add them all together 
+                    <br> Time Complexity: <code>O(nlogn)</code>
+                </div>
+                <div style = "display:grid; align-items:center; grid-template-columns: 2fr 30px 1fr; margin-bottom: 0px; padding: 15px; margin-left: 0">
+                    <code class = "codee" style = "padding: 25px; border-radius: 10px;">
+                        public void quickSort(<span class = "primDatatypes">int</span>[] arr, <span class = "primDatatypes">int</span> low, <span class = "primDatatypes">int</span> high) {<br>
+                            &nbsp&nbsp&nbsp&nbspif (low < high) {<br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">int</span> pivot = arr[high]<span class = "primDatatypes">;</span><br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">int</span> i = (low - 1)<span class = "primDatatypes">;</span><br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">for</span> (int j = low; j <= high - 1; j++) {<br>
+                                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">if</span> (arr[j] < pivot) {<br>
+                                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspi++<span class = "primDatatypes">;</span><br>
+                                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspswap(arr, i, j)<span class = "primDatatypes">;</span><br>
+                                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}<br>
+                                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}<br>
+                                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspswap(arr, i + 1, high)<span class = "primDatatypes">;</span><br>
+                                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">int</span> pi = (i + 1)<span class = "primDatatypes">;</span><br>
+                               &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspquickSort(arr, low, pi - 1)<span class = "primDatatypes">;</span><br>
+                               &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspquickSort(arr, pi + 1, high)<span class = "primDatatypes">;</span><br>
+                               &nbsp&nbsp&nbsp&nbsp}<br>
+                        }                                                
+                    </code>
+                    <div></div>
+                    <div>
+                        <div style = "display:grid; align-items:center; grid-template-columns: 1fr; margin-bottom: 0px; padding: 15px; margin-left: 0">
+                            <code class = "codee" style = "padding: 25px; border-radius: 10px;">
+                                public void swap(<span class = "primDatatypes">int</span>[] arr, <span class = "primDatatypes">int</span> i, <span class = "primDatatypes">int</span> j) {<br>
+                                    &nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">int</span> temp = arr[i];<br>
+                                    &nbsp&nbsp&nbsp&nbsparr[i] = arr[j];<br>
+                                    &nbsp&nbsp&nbsp&nbsparr[j] = temp;<br>
+                                }      
+                            </code>   
+                        </div>      
+                        
+                        <div style = "background-color: rgb(255, 249, 246); padding: 15px; border-radius: 10px;">
+                            <img width = "100%" src = "../Images/QuickSort.png" />
+                        </div>
+                    </div>     
+                </div>
+                <div style = "background-color:rgb(255, 241, 232); padding: 15px; border-radius: 10px; text-align: center">
+                    In the visual representation above, the light blue represents the pivotal that I have picked. 
+                </div>
+            </div>
+            <div style = "background-color: #b9af9d; padding: 30px;">
+                <h3 style = "text-align: center;">Contact Me!</h3>
+                <table style = "padding:15px; padding-top:0%;   margin-left: auto; margin-right: auto;">
+                    <tr>
+                        <td><b>Email:</b></td>
+                        <td>angelina.jiang@student.tdsb.on.ca</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Last Updated: 2023</td>
+                    </tr>
+                </table>
+            </div>
+          <style>
+            .codee {
+                background-color: rgb(44,44,44);
+                color:white;
+                font-size:large;
+            }
+
+            .primDatatypes {
+                color: rgb(219, 153, 103);
+            }
+
+            .oopVariables {
+                color:rgb(182, 214, 212);
+            }
+
+            .comments {
+                color:rgb(40, 180, 155);
+            }
+
+            .methods {
+                color: #f7ba5d;
+            }
+            /* Navbar container */
+                .navbar {
+                    position: fixed;
+                    width: 100%;
+                    background-color: rgb(173, 214, 227);
+                    font-family:'Courier New', Courier, monospace;
+                }
+
+                /* Links inside the navbar */
+                .navbar a {
+                float:left;
+                font-size: 16px;
+                color: rgb(0, 55, 77);
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                }
+
+                /* The dropdown container */
+                .dropdown {
+                float: left;
+                overflow: hidden;
+                }
+
+                /* Dropdown button */
+                .dropdown .dropbtn {
+                font-size: 16px;
+                border: none;
+                outline: none;
+                color: rgb(0, 55, 77);
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit; /* Important for vertical align on mobile phones */
+                margin: 0; /* Important for vertical align on mobile phones */
+                }
+
+                /* Add a red background color to navbar links on hover */
+                .navbar a:hover, .dropdown:hover .dropbtn {
+                background-color: rgb(255, 186, 186);
+                }
+
+                /* Dropdown content (hidden by default) */
+                .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+                }
+
+                /* Links inside the dropdown */
+                .dropdown-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+                }
+
+                /* Add a grey background color to dropdown links on hover */
+                .dropdown-content a:hover {
+                background-color: #ddd;
+                }
+
+                /* Show the dropdown menu on hover */
+                .dropdown:hover .dropdown-content {
+                display: block;
+                }
+          </style>
+    </body>
+</html>

@@ -1,0 +1,200 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body style = "background-color: rgb(208, 255, 252); margin:0%">
+        <div class = "navbar">
+            <a href = "../portfolio.html">Home</a>
+            <div class = "dropdown">
+                <div class = "dropbtn" style = "padding-top: 0px; padding-bottom: 0px;">
+                    <button class = "dropbtn" style = "padding-right: 0px; padding-left: 0px">Lessons</button>
+                    <img src = "../Images/arrow.png" alt = "arrow" height = "12" width="auto"/>
+                </div>   
+                <div class = "dropdown-content">
+                    <a href = "../Lessons/Array.html">Array</a>
+                    <a href = "../Lessons/ArrayList.html">ArrayList</a>
+                    <a href = "../Lessons/OOP.html">OOP</a>
+                    <a href = "../Lessons/Recursion.html">Recursion</a>
+                    <a href = "../Lessons/Search and Sort.html">Search and Sort</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class = "dropbtn" style = "padding-top: 0px; padding-bottom: 0px;">
+                    <button class = "dropbtn" style = "padding-right: 0px; padding-left: 0px">Algorithms</button>
+                    <img src = "../Images/arrow.png" alt = "arrow" height = "12" width="auto"/>
+                </div>   
+                <div class="dropdown-content">
+                    <a href = "2-Pointers.html">2 Pointers</a>
+                    <a href = "../Algorithms/MoreDatatypes.html" style = "background-color: aquamarine;">More Datatypes</a>
+                    <a href = "Prefix Sum Array.html">PSA</a>
+                </div>
+            </div>
+            <a href="../Projects.html">Projects</a>
+            <a href="../About Me.html">About Me</a>
+            <a href="../Bibliography.html">Bibliography</a>
+          </div>
+
+            <div style = "padding-top: 45px;">
+                <img src = "../Images/MoreDatatypes.png" width = "100%"/>
+            </div>
+            <div style = "margin-left: 10%; margin-right: 10%; margin-bottom: 0px; padding: 15px;">
+                <div style = "background-color:rgb(255, 180, 130); border-radius: 10px; padding: 13px; text-align: center">
+                    Did you know? Understanding Maps is the <i>key</i> to success
+                </div>
+                <div style = "background-color:rgb(255, 199, 161); border-radius: 10px; padding: 13px">
+                    <b>Difficulty: Extraordinarily Easy</b>
+                </div>
+                <div style = "background-color:rgb(255, 217, 192); border-radius: 10px; padding: 13px">
+                    <b>Sets</b> are like lists, but they cannot contain <i>duplicates</i>. <br>
+                    <b>Maps</b> is like username and password. They are like arrays, where you can get the element through the index. However, they do not have a set-size and the 'index', or key, does not need to be an integer. They cannot contain duplicate keys. If the map has a key and value, then the new value will override the old one.
+                    <br><br>
+                    HashSet follows the Set interface.<br>
+                    TreeSet also follows the Set interface. However, TreeSets sort the values by ascending order.<br>
+                    <br>
+                    HashMap follows the Maps interface.<br>
+                    TreeMap also follows the Maps interface. However, TreeMaps sort the key by ascending order. <br>
+                    HashMaps can have both null key and value, but TreeMaps can only have a null key.
+                    <br><b>Note: Any type of objects can be stored in any sets or maps, but they must have a compareTo() method for any Trees</b>
+                    <br><br>
+                    How to declare and initialize the following objects:<br>
+                    &nbsp&nbsp&nbsp&nbspHashMap&lt;Integer, Integer&gt; hMap = new HashMap<>();<br>
+                    &nbsp&nbsp&nbsp&nbspTreeMap&lt;Integer, Integer&gt; tMap = new TreeMap<>();<br>
+                    &nbsp&nbsp&nbsp&nbspHashSet&lt;Integer&gt; hSet = new HashSet<>();<br>
+                    &nbsp&nbsp&nbsp&nbspTreeSet&lt;Integer&gt; tSet = new TreeSet<>();<br>
+                    <br><br>
+                    The built-in methods, ceilingKey(int) and floorKey(int) can get the key of the key greater than or less than. For example, 
+                    tMap.ceilingKey(2); will look for the next key greater than 2. If no such key exists, it will return null. The same thing happens with tMap.floorKey(2) except it will look for the next key smaller than 2. 
+                    <br><br> More Info:<br>
+                    <a href="https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html">TreeSet Oracle</a><br>
+                    <a href="https://docs.oracle.com/javase/8/docs/api/java/util/TreeMap.html">TreeMap Oracle</a><br>
+                    <a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html">HashMap Oracle</a><br>
+                    <a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html">HashSet Oracle</a><br>
+
+                </div>
+                <div style = "background-color:rgb(255, 228, 210); border-radius: 10px; padding: 13px; text-align: center">
+                    <b>Queue</b> - A list but when you push an element, it goes to the back. When you pop, or take out an element, it can only take out the first element that you’ve put in
+                    <br><img style = "height: 300; width: auto" src = "../Images/queue representation.png"/>
+                    <br><b>Stack</b> - A list but when you push an element, it goes to the back. When you pop, or take out an element, it can only take out the first element that you’ve put in
+                    <br><img style = "height: 300; width: auto" src = "../Images/stack represntation.webp"/>
+                    <br><b>Deque</b> - A list but when you push an element, it goes to the back. When you pop, or take out an element, it can only take out the first element that you’ve put in
+                    <br><img style = "height: 200; width: auto" src = "../Images/Deque Representation.png"/>
+                    <br><b>Priority Queue</b> - a queue but the largest element will be moved to the front when an element is popped. Notice that this is time-efficient since it does not sort the entire queue. 
+                    <br><img style = "height: 300; width: auto" src = "../Images/priorityquee represen.webp"><br>
+                    <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html">Queue Oracle</a><br>
+                    <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Stack.html">Stack Oracle</a><br>
+                    <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Deque.html">Deque Oracle</a><br>
+                    <a href="https://docs.oracle.com/javase/8/docs/api/java/util/PriorityQueue.html">Priority Queue Oracle</a><br>
+                </div>
+                <div style = "background-color: rgb(255, 241, 232); border-radius: 10px; padding: 13px; text-align: center">
+                    &lt;Understanding Maps, Success&gt;
+                </div>
+            </div>
+
+          <div style = "background-color: #b9af9d; padding: 30px;">
+            <h3 style = "text-align: center;">Contact Me!</h3>
+            <table style = "padding:15px; padding-top:0%;   margin-left: auto; margin-right: auto;">
+                <tr>
+                    <td><b>Email:</b></td>
+                    <td>angelina.jiang@student.tdsb.on.ca</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Last Updated: 2023</td>
+                </tr>
+            </table>
+        </div>
+          <style>
+            .codee {
+                background-color: rgb(44,44,44);
+                color:white;
+                font-size:large;
+            }
+
+            .primDatatypes {
+                color: rgb(219, 153, 103);
+            }
+
+            .oopVariables {
+                color:rgb(182, 214, 212);
+            }
+
+            .comments {
+                color:rgb(40, 180, 155);
+            }
+
+            .methods {
+                color: #f7ba5d;
+            }
+            /* Navbar container */
+                .navbar {
+                    position: fixed;
+                    width: 100%;
+                    background-color: rgb(173, 214, 227);
+                    font-family:'Courier New', Courier, monospace;
+                }
+
+                /* Links inside the navbar */
+                .navbar a {
+                float:left;
+                font-size: 16px;
+                color: rgb(0, 55, 77);
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                }
+
+                /* The dropdown container */
+                .dropdown {
+                float: left;
+                overflow: hidden;
+                }
+
+                /* Dropdown button */
+                .dropdown .dropbtn {
+                font-size: 16px;
+                border: none;
+                outline: none;
+                color: rgb(0, 55, 77);
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit; /* Important for vertical align on mobile phones */
+                margin: 0; /* Important for vertical align on mobile phones */
+                }
+
+                /* Add a red background color to navbar links on hover */
+                .navbar a:hover, .dropdown:hover .dropbtn {
+                background-color: rgb(255, 186, 186);
+                }
+
+                /* Dropdown content (hidden by default) */
+                .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+                }
+
+                /* Links inside the dropdown */
+                .dropdown-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+                }
+
+                /* Add a grey background color to dropdown links on hover */
+                .dropdown-content a:hover {
+                background-color: #ddd;
+                }
+
+                /* Show the dropdown menu on hover */
+                .dropdown:hover .dropdown-content {
+                display: block;
+                }
+          </style>
+    </body>
+</html>

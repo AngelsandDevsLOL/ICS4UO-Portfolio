@@ -1,0 +1,206 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body style = "background-color: rgb(208, 255, 252); margin:0%">
+        <div class = "navbar">
+            <a href = "../portfolio.html">Home</a>
+            <div class = "dropdown">
+                <div class = "dropbtn" style = "padding-top: 0px; padding-bottom: 0px;">
+                    <button class = "dropbtn" style = "padding-right: 0px; padding-left: 0px">Lessons</button>
+                    <img src = "../Images/arrow.png" alt = "arrow" height = "12" width="auto"/>
+                </div>   
+                <div class = "dropdown-content">
+                    <a href = "../Lessons/Array.html">Array</a>
+                    <a href = "../Lessons/ArrayList.html">ArrayList</a>
+                    <a href = "../Lessons/OOP.html">OOP</a>
+                    <a href = "../Lessons/Recursion.html">Recursion</a>
+                    <a href = "../Lessons/Search and Sort.html">Search and Sort</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class = "dropbtn" style = "padding-top: 0px; padding-bottom: 0px;">
+                    <button class = "dropbtn" style = "padding-right: 0px; padding-left: 0px">Algorithms</button>
+                    <img src = "../Images/arrow.png" alt = "arrow" height = "12" width="auto"/>
+                </div>   
+                <div class="dropdown-content">
+                    <a href = "2-Pointers.html" style = "background-color: aquamarine;">2 Pointers</a>
+                    <a href = "../Algorithms/MoreDatatypes.html">More Datatypes</a>
+                    <a href = "Prefix Sum Array.html">PSA</a>
+                </div>
+            </div>
+            <a href="../Projects.html">Projects</a>
+            <a href="../About Me.html">About Me</a>
+            <a href="../Bibliography.html">Bibliography</a>
+            </div>
+            <div style = "padding-top: 45px;">
+                <img src = "../Images/2-pointers.JPG" width = "100%"/>
+            </div>
+            
+        
+            <div style = "margin-left: 10%; margin-right: 10%; margin-bottom: 0px; padding: 15px;">
+                <div style = "background-color:rgb(255, 180, 130); border-radius: 10px; padding: 13px">
+                    <b>Difficulty: Easy</b><br>
+                    An algorithm used a lot in competitive programming. A pointer is a variable that can traverse through an array, normally pointing at elements
+                </div>
+                <div style = "background-color:rgb(255, 199, 161); border-radius: 10px; padding: 13px">
+                    This is useful when going through a sorted array, whenever an array inquiry asks you to locate two integers in an array that either directly or indirectly satisfy a given criteria.
+                </div>
+                <div style = "background-color:rgb(255, 217, 192); border-radius: 10px; padding: 13px">
+                    Example Problem: We want to find the number of pairs in an array with a difference of 5.<br>
+                    How would you solve this? Have a for loop with two variables, or pointers, pointing at 2 different elements in the array and compare. 
+                </div>
+                <div style = "background-color:rgb(255, 228, 210); border-radius: 10px; padding: 13px; line-height: 1.5">
+                    <b>Pseudocode:</b><br>
+                    <br>
+                    Check the difference between the array values at pointer1 and pointer2. <br>
+                    While pointer2 is not at the end or the difference between pointer1 and pointer2 is smaller than 5,<br>
+                    &nbsp&nbsp&nbsp&nbspIf this difference is equal to 5, increase count <br>
+                    &nbsp&nbsp&nbsp&nbspIf pointer2 is not at the end of the array, move pointer2 to the right. <br>
+                    &nbsp&nbsp&nbsp&nbspIf this difference is smaller than 5 and pointer2 is not at the end of the array, then move pointer2 to the right.<br>
+                    &nbsp&nbsp&nbsp&nbspIf this difference is larger than 5, then move pointer1 to the right.<br>
+                    &nbsp&nbsp&nbsp&nbspElse break // this statement means that the difference is smaller than 5 and pointer2 is at the end of the array<br>
+                    &nbsp&nbsp&nbsp&nbspUpdate difference                     <br>
+                </div>
+                <div style = "display:grid; align-items:center; grid-template-columns: 1fr; column-gap:10;margin-left: 10%; margin-right: 10%; margin-bottom: 0px; padding: 15px; padding-bottom: 0px">
+                    <code class = "codee" style = "padding: 25px; border-radius: 10px">
+                        <span class = "primDatatypes">int</span>[] arr = {<span class = "oopVariables">1</span><span class = "primDatatypes">,</span> <span class = "oopVariables">2</span><span class = "primDatatypes">,</span> <span class = "oopVariables">3</span><span class = "primDatatypes">,</span> <span class = "oopVariables">4</span><span class = "primDatatypes">,</span> <span class = "oopVariables">5</span><span class = "primDatatypes">,</span> <span class = "oopVariables">6</span>}<span class = "primDatatypes">;</span> <br>
+                        <span class = "primDatatypes">int</span> pointer1 = <span class = "oopVariables">0</span><span class = "primDatatypes">;</span><br>
+                        <span class = "primDatatypes">int</span> pointer2 = <span class = "oopVariables">1</span><span class = "primDatatypes">;</span><br>
+                        <span class = "primDatatypes">int</span> count = <span class = "oopVariables">0</span><span class = "primDatatypes">;</span><br>
+                        <span class = "primDatatypes">int</span> diff = arr[pointer2] - arr[pointer1]<span class = "primDatatypes">;</span><br>
+                        <span class = "primDatatypes">while</span> (pointer2 != arr.length - <span class = "oopVariables">1</span> || diff < <span class = "oopVariables">5</span>) {<br>
+                        &nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">if</span> (diff == <span class = "oopVariables">5</span>) {<br>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspcount++<span class = "primDatatypes">;</span><br>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">if</span> (pointer2 != arr.length - <span class = "oopVariables">1</span>) pointer2++<span class = "primDatatypes">;</span><br>
+                        &nbsp&nbsp&nbsp&nbsp} <span class = "primDatatypes">else if</span> (diff < <span class = "oopVariables">5</span> && pointer2 != arr.length - <span class = "oopVariables">1</span>) {<br>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppointer2++<span class = "primDatatypes">;</span><br>
+                        &nbsp&nbsp&nbsp&nbsp} <span class = "primDatatypes">else if</span> (diff > <span class = "oopVariables">5</span>) {<br>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppointer1++<span class = "primDatatypes">;</span><br>
+                        &nbsp&nbsp&nbsp&nbsp} <span class = "primDatatypes">else</span> {<br>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">break</span><span class = "primDatatypes">;</span><br>
+                        &nbsp&nbsp&nbsp&nbsp}<br>
+                        &nbsp&nbsp&nbsp&nbspdiff = arr[pointer2] - arr[pointer1]<span class = "primDatatypes">;</span><br>
+                        }<br>
+                        System.<span class = "oopVariables">out</span>.println(count)<span class = "primDatatypes">;</span><br>
+                
+                    </code>
+                </div><br>
+                <div style = "background-color: rgb(255, 241, 232); border-radius: 10px; padding: 13px">
+                    Even nested for loops can be used as pointers! If we had a for loop with variable i and another for loop with variable j, i and j would be pointers!
+                </div>
+                <div style = "background-color: rgb(255, 255, 255); border-radius: 10px; padding: 13px">
+                    Two pointers are used a lot in competitive programming. They can be used to easily remove duplicates from a sorted array, rotate arrays, reverse words, etc. 
+                </div>
+            </div>
+            <div style = "background-color: #b9af9d; padding: 30px;">
+            <h3 style = "text-align: center;">Contact Me!</h3>
+            <table style = "padding:15px; padding-top:0%;   margin-left: auto; margin-right: auto;">
+                <tr>
+                    <td><b>Email:</b></td>
+                    <td>angelina.jiang@student.tdsb.on.ca</td>
+                </tr>
+                <tr>
+                <tr>
+                    <td></td>
+                    <td>Last Updated: 2023</td>
+                </tr>
+            </table>
+        </div>
+
+
+          <style>
+            .codee {
+                background-color: rgb(44,44,44);
+                color:white;
+                font-size:large;
+            }
+
+            .primDatatypes {
+                color: rgb(219, 153, 103);
+            }
+
+            .oopVariables {
+                color:rgb(182, 214, 212);
+            }
+
+            .comments {
+                color:rgb(40, 180, 155);
+            }
+
+            .methods {
+                color: #f7ba5d;
+            }
+            /* Navbar container */
+                .navbar {
+                    position: fixed;
+                    width: 100%;
+                    background-color: rgb(173, 214, 227);
+                    font-family:'Courier New', Courier, monospace;
+                }
+
+                /* Links inside the navbar */
+                .navbar a {
+                float:left;
+                font-size: 16px;
+                color: rgb(0, 55, 77);
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                }
+
+                /* The dropdown container */
+                .dropdown {
+                float: left;
+                overflow: hidden;
+                }
+
+                /* Dropdown button */
+                .dropdown .dropbtn {
+                font-size: 16px;
+                border: none;
+                outline: none;
+                color: rgb(0, 55, 77);
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit; /* Important for vertical align on mobile phones */
+                margin: 0; /* Important for vertical align on mobile phones */
+                }
+
+                /* Add a red background color to navbar links on hover */
+                .navbar a:hover, .dropdown:hover .dropbtn {
+                background-color: rgb(255, 186, 186);
+                }
+
+                /* Dropdown content (hidden by default) */
+                .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+                }
+
+                /* Links inside the dropdown */
+                .dropdown-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+                }
+
+                /* Add a grey background color to dropdown links on hover */
+                .dropdown-content a:hover {
+                background-color: #ddd;
+                }
+
+                /* Show the dropdown menu on hover */
+                .dropdown:hover .dropdown-content {
+                display: block;
+                }
+          </style>
+    </body>
+</html>

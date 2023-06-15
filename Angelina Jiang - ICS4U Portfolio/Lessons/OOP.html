@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body style = "background-color: rgb(208, 255, 252); margin:0%; padding-top: 0px">
+        <div class = "navbar" style = "top: 0; left: 0;">
+            <a href = "../portfolio.html">Home</a>
+            <div class = "dropdown">
+                <div class = "dropbtn" style = "padding-top: 0px; padding-bottom: 0px;">
+                    <button class = "dropbtn" style = "padding-right: 0px; padding-left: 0px">Lessons</button>
+                    <img src = "../Images/arrow.png" alt = "arrow" height = "12" width="auto"/>
+                </div>
+                <div class = "dropdown-content">
+                    <a href = "Array.html">Array</a>
+                    <a href = "ArrayList.html">ArrayList</a>
+                    <a href = "OOP.html" style = "background-color: aquamarine;">OOP</a>
+                    <a href = "Recursion.html">Recursion</a>
+                    <a href = "Search and Sort.html">Search and Sort</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class = "dropbtn" style = "padding-top: 0px; padding-bottom: 0px;">
+                    <button class = "dropbtn" style = "padding-right: 0px; padding-left: 0px">Algorithms</button>
+                    <img src = "../Images/arrow.png" alt = "" height = "12" width="auto"/>
+                </div>
+                <div class="dropdown-content">
+                    <a href = "../Algorithms/2-Pointers.html">2 Pointers</a>
+                    <a href = "../Algorithms/MoreDatatypes.html">More Datatypes</a>
+                    <a href = "../Algorithms/Prefix Sum Array.html">PSA</a>
+                </div>
+            </div>
+            <a href="../Projects.html">Projects</a>
+            <a href="../About Me.html">About Me</a>
+            <a href="../Bibliography.html">Bibliography</a>
+        </div>
+        <div style = "padding-top: 45px; padding-bottom: 50px">
+            <img src = "../Images/OOP.JPG" width = "100%"/>
+        </div>
+
+        <div style = "display:grid; align-items:center; grid-template-columns: 2fr 40px 1fr; column-gap:10; padding-left:10%; padding-right: 10%; padding-bottom: 20px;" class = "font">
+            <div>
+                <p style = "font-size:large; text-align: center;"> 
+                    Object Oriented Programming is a style of programming when the user creates their own object. <br>An object is an instance of a class and a class is a blueprint for creating objects with a particular data structure. An object normally has:
+                </p>
+                <ul style = "line-height: 200%;">
+                    <li>An identity</li>
+                    <li>A state/characteristics -> variables (Example: hairColour:String)</li>
+                    <li>A behaviour -> methods (Example: eat():void)</li>
+                </ul>
+            </div>
+            <div></div>
+            <div style = "padding: 15px; background-color: rgb(40, 180, 155);">
+                <img src = "../Images/objected-oriented-programming-featured-image.jpg" alt = "Angelina Jiang" height = "250" width = auto/>
+            </div>
+        </div>
+        <div style = "margin-left: 10%; margin-right: 10%; padding: 20px; background-color: rgb(255, 199, 161); border-radius:15px; text-align: center">The <b>constructor</b> is a special method which has no return value and the same name as the class</div>
+        <div style = "display:grid; align-items:center; grid-template-columns: 3fr 40px 2fr; column-gap:10; padding-left:10%; padding-right: 10%; padding-top: 25px; padding-bottom: 25px; line-height:150%;" class = "font">
+            <code class = "codee" style = "padding: 25px; border-radius: 10px">
+                <span class = "primDatatypes">public class</span> Pair { <span class = "comments">/** class declaration */</span><br>
+                &nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">private int</span> xCoordinate<span class = "primDatatypes">;</span> <span class = "comments">/** instance variables*/</span><br>
+                &nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">private int</span> yCoordinate<span class = "primDatatypes">;</span><br>
+                &nbsp&nbsp&nbsp&nbspString value = <span class = "comments">"Hello World"</span><span class = "primDatatypes">;</span><br>
+                <br>
+                &nbsp&nbsp&nbsp&nbsp<span class = "comments">/**<br>
+                &nbsp&nbsp&nbsp&nbsp * Pair constructor<br>
+                &nbsp&nbsp&nbsp&nbsp * <br>
+                &nbsp&nbsp&nbsp&nbsp * @param x The x-coordinate<br>
+                &nbsp&nbsp&nbsp&nbsp * @param y The y-coordinate<br>
+                &nbsp&nbsp&nbsp&nbsp */</span><br>
+                &nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">public</span> <span class = "methods">Pair</span> (<span class = "primDatatypes">int</span> x, <span class = "primDatatypes">int</span> y) {<br>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span c lass = "oopVariables" >xCoordinate</span> = x<span class = "primDatatypes">;</span><br>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class = "oopVariables">yCoordinate</span> = y<span class = "primDatatypes">;</span><br>
+                    &nbsp&nbsp&nbsp&nbsp}<br>
+                }<br>
+            </code>
+            <div></div>
+            <p style = "font-size:larger">&nbsp &nbsp&nbsp&nbsp A class creates an object using a <b>constructor</b>. They are often used with values in their parameters or brackets. The constructor is within the class declaration. If there is no constructor, the object will be created but will have values null. There can be multiple constructors in a class as long as their parameters are different.
+                <br> <br>&nbsp&nbsp&nbsp&nbspInstance variables, variables declared in the class but outside of any constructors, methods, or blocks, are normally initialized in the constructor unless they start off with a default set value.</p>
+        </div>
+
+        <p style = "text-align: center; margin-left: 10%; margin-right: 10%; margin-bottom: 35px; padding: 15px; background-color: rgb(255, 228, 210); border-radius: 10px">
+        The keyword <b>private</b> means that the variable or method cannot be accessed outside of the class. For example, if Pair p was declared and initialized in another class, I would not be able to access p's y value through <code>p.y</code>
+        </p>
+
+        <div style = "display:grid; align-items:center; grid-template-columns: 1fr 40px 2fr; column-gap:10;margin-left: 10%; margin-right: 10%; margin-bottom: 35px; padding: 15px;">
+                <div style = "font-size: larger">
+                    <b style = "text-align: center;">Set and Get Methods</b><br><br>
+                    <ul>
+                    <li>Also known as accessor and mutate methods respectively</li><br>
+                    <li>Methods in the class that can access or mutate the values of the class</li>
+                    </ul>
+                </div>
+            <div>
+            </div>
+            <code class = "codee" style = "padding: 25px; border-radius: 15px;">
+                <span class = "comments">/**
+                * Get xCoordinate method<br>
+                * <br>
+                * @return xCoordinate<br>
+                */</span><br>
+               <span class = "primDatatypes">public int</span> <span class = "methods">getxCoordinate</span>() {<br>
+                &nbsp&nbsp&nbsp&nbspreturn <span class = "oopVariables">xCoordinate</span><span class = "primDatatypes">;</span><br>
+               }<br>
+               <span class = "comments">
+               /**<br>
+                * Get xCoordinate method<br>
+                *<br>
+                * @param xCoordinate set the object's xCoordinate to value of xCoordinate<br>
+                */</span><br>
+                <span class = "primDatatypes">public void</span> <span class = "methods">setxCoordinate</span>(<span class = "primDatatypes">int</span> xCoordinate) {<br>
+                    &nbsp&nbsp&nbsp&nbsp<span class = "oopVariables">this.xCoordinate</span> = xCoordinate<span class = "primDatatypes">;</span><br>
+               }<br>
+            </code>
+        </div>
+        <div style = "display:grid; align-items:center; grid-template-columns: 1fr 40px 2fr; column-gap:10;margin-left: 10%; margin-right: 10%; margin-bottom: 0px; padding: 15px; padding-bottom: 0px">
+            <div style = "margin-bottom: 0px; padding: 15px; padding-bottom: 0px;">
+                <p style = "font-size: larger"><b>UML's</b></p>
+                <img src = "../Images/houseUml.png"/>
+            </div>
+            <div></div>
+            <div style = "font-size: larger">
+                UML stands for Unified Modeling Language. It represents a class with the name, variables, and methods. <br><br><br>
+                An example of a UML is on the left. The name of the class is House. The variables have a "-" symbol to represent that this variable is private. Variables in UML are in the form
+                <br><b>-variableName: dataType</b><br><br><br>
+                Next, we have the constructor with the parameters. For each variable in the parameter, we need to put the name of the variable and the datatype, separated by a colon.
+                For the methods, the "+" symbol states that this method is public. It is in the format <br><b>+methodName(parameter with variables): returnDatatype</b>
+            </div>
+        </div>
+        <div style = "display:grid; align-items:center; grid-template-columns: 1fr; column-gap:10;margin-left: 10%; margin-right: 10%; margin-bottom: 0px; padding: 15px; padding-bottom: 0px">
+            <div style = "text-align: center">
+                <b style = "font-size: larger">Inheritance</b>
+
+                <ul style = "line-height: 1.5">
+                    <li> A class, the subclass or is-a class, can inherit all public methods from one and only one other class, the parent class or has-a. </li>
+                    <li>A subclass can also override its parent’s methods by having a method with the same name. The methods also need the same parameters in order to have the same signature. The return type does not matter</li>
+                    <li>Local variables are variables declared and initialized within a method. Once the method ends, the local variables stop existing.</li>
+                    <li> In the constructor of the subclass, there must be super() in the first line of the constructor in order to call the other constructor. Parameters are allowed in super, which declares the parent’s constructor                    </li>
+                    <li>Can also call the overridden methods from the subclass to the parent class by putting super.methodName(with parameters)                    </li>
+                    <li>Private methods are not inherited                    </li>
+                    <li>Subclass cannot directly access private variables                    </li>
+                  </ul>  
+            </div>
+            <br><div>
+            <b>Encapsulation:</b> the process of hiding variables from code in other objects and classes from the outside<br>
+<b>Abstraction</b>: the process of hiding unwanted information</div>
+            <div style = "display:grid; align-items:center; grid-template-columns: 1fr 30px 1fr; column-gap: 10px; padding: 15px; padding-bottom: 0px">
+                <code class = "codee" style = "padding: 25px; border-radius: 10px;">
+                    <span class = "primDatatypes">public class</span> User {<br>
+                        &nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">private</span> String username<span class = "primDatatypes">;</span><br>
+                        &nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">private</span> String password<span class = "primDatatypes">;</span><br>
+                        &nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">public</span> User(String u, String p) {<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class = "oopVariables">username</span> = u<span class = "primDatatypes">;</span> <br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class = "oopVariables">password</span> = p<span class = "primDatatypes">;</span><br>&nbsp&nbsp&nbsp&nbsp}<br>
+                    }
+                </code>
+                <div></div>
+                <div>Here, we can see examples of encapsulation and abstraction. We do not want to reveal the password and make it public to other users. This is an example of encapsulation. <br><br> We also do not want to make the username public, otherwise it will take up unwanted space. This is an example of abstraction.</div>
+            </div>
+            <div style = "display:grid; align-items:center; grid-template-columns: 1fr 30px 1fr; column-gap: 10px; padding: 15px;">
+                <code class = "codee" style = "padding: 25px; border-radius: 10px;">
+                    <span class = "primDatatypes">public</span> class Pet {<br>
+                        &nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">private</span> String name<span class = "primDatatypes">;</span><br>
+                        &nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">public</span> Pet (String n) {<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspname = n<span class = "primDatatypes">;</span><br>
+                            &nbsp&nbsp&nbsp&nbsp}<br>
+                            &nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">public</span> String toString() {<br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">return</span> "name: " + name<span class = "primDatatypes">;</span><br>
+                                &nbsp&nbsp&nbsp&nbsp}<br>
+                    }<br>
+                    <span class = "primDatatypes">public</span> class Dog <span class = "primDatatypes">extends</span> Pet {<br>
+                        &nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">private</span> String noise<span class = "primDatatypes">;</span><br>
+                        &nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">public</span> Dog(String n, String name) {<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class = "primDatatypes">super</span>(name)<span class = "primDatatypes">;</span><br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspnoise = n<span class = "primDatatypes">;</span><br>
+                            &nbsp&nbsp&nbsp&nbsp}<br>
+                    }
+                </code>
+                <div></div>
+                <div>
+                    Here, we can see that the Dog class implements the Pet class. The Pet class is the parent class. This means that the Dog class is the child class. This means that now, the Dog class has the variable name, and can use the toString method. However, it does not inherit the variable, since it is private. <br>
+                <br> So, if we put <code>Dog d = new Dog("arf!", "Coco");<br>d.toString();</code> will return <code>name: Coco</code>
+                <br> But what if we added a toString() method in the Dog class?
+                    <div style = "display:grid; align-items:center; grid-template-columns: 1fr; column-gap: 10px; padding: 15px; padding-bottom: 0px">
+                        <code class = "codee" style = "padding: 25px; border-radius: 10px;">
+                            public toString() { <br>&nbsp&nbsp&nbsp&nbspreturn "Dog " + super.toString();<br> }
+                        </code>
+                    </div>
+                </div>
+            </div>
+            
+            <div style = "background-color: rgb(255, 180, 130); padding: 15px; border-radius: 10px;">
+                This is an example of overloading. <b>Overloading</b> is when you use the parent's method equivalent of the method you are in. <b>Overriding</b> is when your parent has the same method, but the child method does not use it. The difference is that overloading uses the parent's method and overriding does not. 
+            </div>
+            <div style = "display:grid; align-items:center; grid-template-columns: 1fr 30px 1fr; column-gap: 10px; padding: 15px; padding-bottom: 0px">
+                <div>
+                    Overloading and Overriding are both examples of Polymorphism. Polymorphism is when the correct method is called for an object. So, for example, if we want to declare and initialize <code>Pet p = new Dog("Arf!", "Coco")</code>, we can choose whether we want to print <code>name: Coco</code> or <code>Dog name: Coco</code> through polymorphism. 
+                </div>
+                <div></div>
+                <div style = "background-color: rgb(255, 228, 210); padding: 15px; border-radius: 10px">
+                    Notice that <code>Pet p = new Dog("Arf!", "Coco")</code> will not print an error. It will access the Dog constructor. Variable p will be able to access all of Pet's methods. If any of Dog's methods overlap with Pet's methods, then it will go to the Dog's methods. However, if we do <code>Dog d = new Pet("")</code>, it will print out an error since Dog cannot be initialized as a Pet. 
+                    
+                </div>
+            </div>
+            <div>
+                <div style = "background-color: rgb(255, 241, 232); padding: 15px; border-radius: 10px">
+                    However, what if we have <code>Pet p = new Dog("Arf!", "Coco")</code> and we want to access Dog's methods if Pet does not contain those methods? Then, we need to use <b>downcasting</b>. Downcasting is when we cast p to Dog. p is currently declared as a Pet, but since it has been initialized as a Dog, we are allowed to downcast it. <br>It would look like this: <br>
+                    <code>(Dog p).dogMethod()</code> <br> We need to put (Dog p) before calling the method, otherwise it would not work.
+                </div>
+            </div>
+            <div style = "display:grid; align-items:center; grid-template-columns: 1fr 30px 1fr; column-gap: 10px; padding: 15px; padding-bottom: 0px">
+                <div>
+                <b>Abstract class</b> 
+                <ul>
+                    <li><code>public abstract class</code></li>
+                    <li>can’t create objects</li>
+                    <li>Can have constructors, which can be called from constructors of subclasses</li>
+                    <li>Abstract classes cannot be instantiated. Method is instantiated in other sub classes</li>
+                    <li>If a subclass does not provide an implementation code for all abstract methods, it must be declared abstract</li>
+                    <li>Can have abstract methods</li>
+                    <li>A class with no abstract methods is called concrete</li>
+                </ul>
+                </div>
+                <div></div>
+                <div><b>Interfaces</b>
+                    <ul>
+                        <li><code>public interface</code></li>
+                    <li>Similar to an abstract class</li>
+                    <li>All methods are abstract</li>
+                    <li>Does not have any constructors </li>
+                    <li>Public abstract does not need to be written because all the methods are public abstract </li>
+                    <li>Can implements several interfaces</li>
+                    </ul>
+                </div>
+            </div>
+            <br>
+            <div style = "text-align: center">
+                <span style = "font-size: large;"><b><code>'this'</code> keyword</b></span>
+            </div>
+            <div>
+                <ul>
+                <li>Can be used as a <b>constructor</b>
+                <ul><li>this(); represents substituting the above constructor into the current constructor</li></ul></li>
+                <li>Can be used as a <b>variable</b>
+                <ul><li>If you were specifying which variable, between the instance variables in the current class and the variables, passed through the parameter or from another class</li></ul></li>
+                <li>Can be used as a <b>method</b>
+                <ul><li>If you were specifying which method</li></ul></li>
+                <li>Can be used as an <b>argument</b>
+                <ul><li>it is passing a reference to the current object.</li></ul></li>
+                </ul>
+            </div>
+        </div>
+<br>
+
+          <div style = "background-color: #b9af9d; padding: 30px;">
+            <h3 style = "text-align: center;">Contact Me!</h3>
+            <table style = "padding:15px; padding-top:0%; margin-left: auto; margin-right: auto;">
+                <tr>
+                    <td><b>Email:</b></td>
+                    <td>angelina.jiang@student.tdsb.on.ca</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Last Updated: 2023</td>
+                </tr>
+            </table>
+        </div>
+    
+        <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            // Create gradient
+            var grd = ctx.createLinearGradient(0,0,300,0);
+            grd.addColorStop(0,"orange");
+            grd.addColorStop(0.5, "white")
+            grd.addColorStop(1,"pink");
+            // Fill with gradient
+            ctx.fillStyle = grd;
+            ctx.fillRect(0,0,c.width,100);
+        </script>
+          <style>
+
+            .codee {
+                background-color: rgb(44,44,44);
+                color:white;
+                font-size:large;
+            }
+
+            .primDatatypes {
+                color: rgb(219, 153, 103);
+            }
+
+            .oopVariables {
+                color:rgb(182, 214, 212);
+            }
+
+            .comments {
+                color:rgb(40, 180, 155);
+            }
+
+            .methods {
+                color: #f7ba5d;
+            }
+
+            .font {
+                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+            /* Navbar container */
+            canvas {
+                z-index: 1;
+            }
+                .navbar {
+                    position: fixed;
+                    width: 100%;
+                    background-color: rgb(173, 214, 227);
+                    font-family:'Courier New', Courier, monospace;
+                    display: block;
+                    z-index: 1;
+                }
+
+                /* Links inside the navbar */
+                .navbar a {
+                float:left;
+                font-size: 16px;
+                color: rgb(0, 55, 77);
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                }
+
+                /* The dropdown container */
+                .dropdown {
+                float: left;
+                overflow: hidden;
+                }
+            
+
+                /* Dropdown button */
+                .dropdown .dropbtn {
+                font-size: 16px;
+                border: none;
+                outline: none;
+                color: rgb(0, 55, 77);
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit; /* Important for vertical align on mobile phones */
+                margin: 0; /* Important for vertical align on mobile phones */
+                }
+
+                /* Add a red background color to navbar links on hover */
+                .navbar a:hover, .dropdown:hover .dropbtn {
+                background-color: rgb(255, 186, 186);
+                }
+
+                /* Dropdown content (hidden by default) */
+                .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 2;
+                }
+
+                /* Links inside the dropdown */
+                .dropdown-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+                }
+
+                /* Add a grey background color to dropdown links on hover */
+                .dropdown-content a:hover {
+                background-color: #ddd;
+                }
+
+                /* Show the dropdown menu on hover */
+                .dropdown:hover .dropdown-content {
+                display: block;
+                }
+          </style>
+    </body>
+</html>

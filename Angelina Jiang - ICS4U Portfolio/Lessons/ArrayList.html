@@ -1,0 +1,185 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body style = "background-color: rgb(208, 255, 252); margin:0%">
+        <div class = "navbar">
+            <a href = "../portfolio.html">Home</a>
+            <div class = "dropdown">
+                <div class = "dropbtn" style = "padding-top: 0px; padding-bottom: 0px;">
+                    <button class = "dropbtn" style = "padding-right: 0px; padding-left: 0px">Lessons</button>
+                    <img src = "../Images/arrow.png" alt = "arrow" height = "12" width="auto"/>
+                </div>
+                <div class = "dropdown-content">
+                    <a href = "Array.html">Array</a>
+                    <a href = "ArrayList.html" style = "background-color: aquamarine;">ArrayList</a>
+                    <a href = "OOP.html">OOP</a>
+                    <a href = "Recursion.html">Recursion</a>
+                    <a href = "Search and Sort.html">Search and Sort</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class = "dropbtn" style = "padding-top: 0px; padding-bottom: 0px;">
+                    <button class = "dropbtn" style = "padding-right: 0px; padding-left: 0px">Algorithms</button>
+                    <img src = "../Images/arrow.png" alt = "arrow" height = "12" width="auto"/>
+                </div>                
+                <div class="dropdown-content">
+                    <a href = "../Algorithms/2-Pointers.html">2 Pointers</a>
+                    <a href = "../Algorithms/MoreDatatypes.html">More Datatypes</a>
+                    <a href = "../Algorithms/Prefix Sum Array.html">PSA</a>
+                </div>
+            </div>
+            <a href="../Projects.html">Projects</a>
+            <a href="../About Me.html">About Me</a>
+            <a href="../Bibliography.html">Bibliography</a>
+          </div>
+            <div style = "padding-top: 45px;">
+                <img src = "../Images/arraylist.jpg" width = "100%"/>
+            </div>
+            <div style = "margin-left: 10%; margin-right: 10%; margin-bottom: 0px; padding: 15px;">
+                <div style = "background-color:rgb(255, 180, 130); border-radius: 10px; padding: 13px">
+                    ArrayLists are similar to arrays. They can store multiple elements of the same type in a contiguous block of memory and can store multiple values. ArrayLists, however, <b>do not have a limited size</b>. It allows the user to add and remove elements. However, ArrayLists are much <b>slower</b>. The ArrayLists comes from the java.util.List interface.
+                </div>
+                <div style = "background-color:rgb(255, 199, 161); border-radius: 10px; padding: 13px">
+                    <code>ArrayList&lt;datatype> name = new ArrayList&lt;datatype>(); // More recommended
+                    <br>ArrayList&lt;datatype> name = new ArrayList&lt;>();</code>
+                </div>
+                <div style = "background-color:rgb(255, 217, 192); border-radius: 10px; padding: 13px">
+                    <b>Methods</b><br><br>
+                    ArrayLists have different methods than arrays.
+                    <br>
+                    To <b>access</b> a value in the ArrayList: <code>aList.get(index);</code>
+                    <br>
+                    To <b>change</b> a value: <code>aList.set(index, value)</code>
+                    <br>
+                    To <b>add</b> a new value: <code>aList.add(index, value)</code> or <code>aList.add(value)</code> to add at the end
+                    <br>
+                    To find the <b>index</b> of: <code>aList.indexOf(object)</code>
+                    <br>
+                    To find the <b>length</b> of the ArrayList: <code>aList.size()</code>
+                    <br>
+                    To <b>remove</b> a value: <code>aList.remove(index)</code> or <code>aList.remove(Object)</code>. However, if the object is an integer, then it will remove the index.
+                </div>
+                <div style = "background-color:rgb(255, 228, 210); border-radius: 10px; padding: 13px; line-height: 1.5">
+                    <img src = "../Images/ArrayListsRepresentation.png"/><br>
+                    Getting the index is the same as an array. The first element starts at 0. 
+                </div>
+                <div style = "background-color: rgb(255, 241, 232); border-radius: 10px; padding: 13px">
+                    ArrayLists has their own <b>sorting</b> algorithm, called <code>Collections.sort(aList);</code>. However, in order to use Collections.sort() java.util.Collections needs to be imported.
+                </div>
+                <div style = "background-color: rgb(255, 255, 255); border-radius: 10px; padding: 13px">
+                    Because ArrayLists are slower than arrays due to the resizing, it takes more time. Therefore, it is more recommended to use arrays when the set size is known, but arraylists are always a capable secondary option.
+                </div>
+                <div style = "background-color: rgb(255, 241, 232); border-radius: 10px; padding: 13px">
+                    ArrayLists can contain int, double, String, and even other Objects! Furthermore, even arrays of ArrayLists can be created!
+                    <br> <code>ArrayList&lt;Integer>[] ar = new ArrayList&lt;>[4];</code>
+                </div>
+            </div>
+          <div style = "background-color: #b9af9d; padding: 30px;">
+            <h3 style = "text-align: center;">Contact Me!</h3>
+            <table style = "padding:15px; padding-top:0%;   margin-left: auto; margin-right: auto;">
+                <tr>
+                    <td><b>Email:</b></td>
+                    <td>angelina.jiang@student.tdsb.on.ca</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Last Updated: 2023</td>
+                </tr>
+            </table>
+        </div>
+          <style>
+            .codee {
+                background-color: rgb(44,44,44);
+                color:white;
+                font-size:large;
+            }
+
+            .primDatatypes {
+                color: rgb(219, 153, 103);
+            }
+
+            .oopVariables {
+                color:rgb(182, 214, 212);
+            }
+
+            .comments {
+                color:rgb(40, 180, 155);
+            }
+
+            .methods {
+                color: #f7ba5d;
+            }
+            /* Navbar container */
+                .navbar {
+                    position: fixed;
+                    width: 100%;
+                    background-color: rgb(173, 214, 227);
+                    font-family:'Courier New', Courier, monospace;
+                }
+
+                /* Links inside the navbar */
+                .navbar a {
+                float:left;
+                font-size: 16px;
+                color: rgb(0, 55, 77);
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                }
+
+                /* The dropdown container */
+                .dropdown {
+                float: left;
+                overflow: hidden;
+                }
+
+                /* Dropdown button */
+                .dropdown .dropbtn {
+                font-size: 16px;
+                border: none;
+                outline: none;
+                color: rgb(0, 55, 77);
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit; /* Important for vertical align on mobile phones */
+                margin: 0; /* Important for vertical align on mobile phones */
+                }
+
+                /* Add a red background color to navbar links on hover */
+                .navbar a:hover, .dropdown:hover .dropbtn {
+                background-color: rgb(255, 186, 186);
+                }
+
+                /* Dropdown content (hidden by default) */
+                .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+                }
+
+                /* Links inside the dropdown */
+                .dropdown-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+                }
+
+                /* Add a grey background color to dropdown links on hover */
+                .dropdown-content a:hover {
+                background-color: #ddd;
+                }
+
+                /* Show the dropdown menu on hover */
+                .dropdown:hover .dropdown-content {
+                display: block;
+                }
+          </style>
+    </body>
+</html>
